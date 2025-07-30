@@ -1,0 +1,46 @@
+var _style, _rect;
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+import * as React from "react";
+import { forwardRef } from "react";
+var SvgSoundBars = function SvgSoundBars(props, ref) {
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 24,
+    height: 24,
+    fill: "currentColor",
+    ref: ref
+  }, props), _style || (_style = /*#__PURE__*/React.createElement("style", null, "@keyframes spinner_3l8F{0%{opacity:.8;animation-timing-function:cubic-bezier(.14,.73,.34,1);y:8px;height:8px}66.66%{opacity:.9;animation-timing-function:cubic-bezier(.14,.73,.34,1);y:8px;height:8px}33.33%{animation-timing-function:cubic-bezier(.65,.26,.82,.45);y:4px;height:16px;opacity:.9}to{opacity:1}}.sound-bars_svg__spinner_7uc5{animation:spinner_3l8F 1.3s cubic-bezier(.175,.885,.32,1.275) infinite;animation-delay:-.9s}")), /*#__PURE__*/React.createElement("rect", {
+    width: 2.8,
+    height: 8,
+    x: 6.5,
+    y: 8,
+    className: "sound-bars_svg__spinner_7uc5",
+    rx: 1.4,
+    ry: 1.4,
+    style: {
+      animationDelay: "-.7s"
+    }
+  }), _rect || (_rect = /*#__PURE__*/React.createElement("rect", {
+    width: 2.8,
+    height: 8,
+    x: 10.1,
+    y: 8,
+    className: "sound-bars_svg__spinner_7uc5",
+    rx: 1.4,
+    ry: 1.4
+  })), /*#__PURE__*/React.createElement("rect", {
+    width: 2.8,
+    height: 8,
+    x: 13.7,
+    y: 8,
+    className: "sound-bars_svg__spinner_7uc5",
+    rx: 1.4,
+    ry: 1.4,
+    style: {
+      animationDelay: "-.5s"
+    }
+  }));
+};
+var ForwardRef = /*#__PURE__*/forwardRef(SvgSoundBars);
+export { ForwardRef as ReactComponent };
+export default "data:image/svg+xml;base64,PHN2ZyBmaWxsPSJjdXJyZW50Q29sb3IiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KICA8c3R5bGU+DQogICAgLnNwaW5uZXJfN3VjNSB7DQogICAgICBhbmltYXRpb246IHNwaW5uZXJfM2w4RiAxLjNzIGN1YmljLWJlemllcigwLjE3NSwgMC44ODUsIDAuMzIsIDEuMjc1KSBpbmZpbml0ZTsNCiAgICAgIGFuaW1hdGlvbi1kZWxheTogLTAuOXM7DQogICAgfQ0KICAgIC5zcGlubmVyX1JpYk4gew0KICAgICAgYW5pbWF0aW9uLWRlbGF5OiAtMC43czsNCiAgICB9DQogICAgLnNwaW5uZXJfWkF4ZCB7DQogICAgICBhbmltYXRpb24tZGVsYXk6IC0wLjVzOw0KICAgIH0NCiAgICBAa2V5ZnJhbWVzIHNwaW5uZXJfM2w4RiB7DQogICAgICAwJSB7DQogICAgICAgIG9wYWNpdHk6IDAuODsNCiAgICAgIH0NCiAgICAgIDY2LjY2JSB7DQogICAgICAgIG9wYWNpdHk6IDAuOTsNCiAgICAgIH0NCiAgICAgIDAlLCA2Ni42NiUgew0KICAgICAgICBhbmltYXRpb24tdGltaW5nLWZ1bmN0aW9uOiBjdWJpYy1iZXppZXIoMC4xNCwgMC43MywgMC4zNCwgMSk7DQogICAgICAgIHk6IDhweDsgLyogQWRqdXN0ZWQgZnJvbSA2cHggdG8gOHB4ICovDQogICAgICAgIGhlaWdodDogOHB4OyAvKiBBZGp1c3RlZCBmcm9tIDEycHggdG8gOHB4ICovDQogICAgICB9DQogICAgICAzMy4zMyUgew0KICAgICAgICBhbmltYXRpb24tdGltaW5nLWZ1bmN0aW9uOiBjdWJpYy1iZXppZXIoMC42NSwgMC4yNiwgMC44MiwgMC40NSk7DQogICAgICAgIHk6IDRweDsgLyogQWRqdXN0ZWQgZnJvbSAxcHggdG8gNHB4ICovDQogICAgICAgIGhlaWdodDogMTZweDsgLyogQWRqdXN0ZWQgZnJvbSAyMnB4IHRvIDE2cHggKi8NCiAgICAgICAgb3BhY2l0eTogMC45Ow0KICAgICAgfQ0KICAgICAgMTAwJSB7DQogICAgICAgIG9wYWNpdHk6IDE7DQogICAgICB9DQogICAgfQ0KICA8L3N0eWxlPg0KICA8cmVjdCBjbGFzcz0ic3Bpbm5lcl83dWM1IHNwaW5uZXJfUmliTiIgeD0iNi41IiB5PSI4IiB3aWR0aD0iMi44IiBoZWlnaHQ9IjgiIHJ4PSIxLjQiIHJ5PSIxLjQiIC8+DQogIDxyZWN0IGNsYXNzPSJzcGlubmVyXzd1YzUiIHg9IjEwLjEiIHk9IjgiIHdpZHRoPSIyLjgiIGhlaWdodD0iOCIgcng9IjEuNCIgcnk9IjEuNCIgLz4NCiAgPHJlY3QgY2xhc3M9InNwaW5uZXJfN3VjNSBzcGlubmVyX1pBeGQiIHg9IjEzLjciIHk9IjgiIHdpZHRoPSIyLjgiIGhlaWdodD0iOCIgcng9IjEuNCIgcnk9IjEuNCIgLz4NCjwvc3ZnPg==";

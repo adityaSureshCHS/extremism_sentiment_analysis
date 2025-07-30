@@ -1,0 +1,21 @@
+var _path, _path2;
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+import * as React from "react";
+import { forwardRef } from "react";
+var SvgRefresh = function SvgRefresh(props, ref) {
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    fill: "none",
+    viewBox: "0 0 24 24",
+    ref: ref
+  }, props), _path || (_path = /*#__PURE__*/React.createElement("path", {
+    fill: "currentColor",
+    d: "M7.688 6.857 5.83 5l-1 6 6-1-1.706-1.705a4.977 4.977 0 0 1 2.706-.795v-2c-1.55 0-2.983.504-4.143 1.357M7.358 14.737A5 5 0 0 0 11.83 17.5v2a7 7 0 0 1-6.263-3.869z"
+  })), _path2 || (_path2 = /*#__PURE__*/React.createElement("path", {
+    fill: "currentColor",
+    d: "M15.974 18.143 17.83 20l1-6-6 1 1.705 1.706a4.976 4.976 0 0 1-2.705.794v2c1.55 0 2.983-.504 4.143-1.357M16.304 10.263A5 5 0 0 0 11.83 7.5v-2a7 7 0 0 1 6.262 3.869z"
+  })));
+};
+var ForwardRef = /*#__PURE__*/forwardRef(SvgRefresh);
+export { ForwardRef as ReactComponent };
+export default "data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik03LjY4Nzg5IDYuODU3MDhMNS44MzA4MSA1TDQuODMwODEgMTFMMTAuODMwOCAxMEw5LjEyNTMyIDguMjk0NTFDOS45MDUyIDcuNzkxNzQgMTAuODM0IDcuNSAxMS44MzA4IDcuNVY1LjVDMTAuMjgwNSA1LjUgOC44NDc4OSA2LjAwNCA3LjY4Nzg5IDYuODU3MDhaIiBmaWxsPSJjdXJyZW50Q29sb3IiLz4KPHBhdGggZD0iTTcuMzU3NzMgMTQuNzM2NkM4LjE3ODYyIDE2LjM3NTEgOS44NzMzNyAxNy41IDExLjgzMDggMTcuNVYxOS41QzkuMDkwMzggMTkuNSA2LjcxNzczIDE3LjkyNTIgNS41Njg0OCAxNS42MzEyTDcuMzU3NzMgMTQuNzM2NloiIGZpbGw9ImN1cnJlbnRDb2xvciIvPgo8cGF0aCBkPSJNMTUuOTczNyAxOC4xNDI5TDE3LjgzMDggMjBMMTguODMwOCAxNEwxMi44MzA4IDE1TDE0LjUzNjMgMTYuNzA1NUMxMy43NTY0IDE3LjIwODMgMTIuODI3NyAxNy41IDExLjgzMDggMTcuNVYxOS41QzEzLjM4MTIgMTkuNSAxNC44MTM3IDE4Ljk5NiAxNS45NzM3IDE4LjE0MjlaIiBmaWxsPSJjdXJyZW50Q29sb3IiLz4KPHBhdGggZD0iTTE2LjMwMzkgMTAuMjYzNEMxNS40ODMgOC42MjQ4NiAxMy43ODgzIDcuNSAxMS44MzA4IDcuNVY1LjVDMTQuNTcxMyA1LjUgMTYuOTQzOSA3LjA3NDggMTguMDkzMSA5LjM2ODgyTDE2LjMwMzkgMTAuMjYzNFoiIGZpbGw9ImN1cnJlbnRDb2xvciIvPgo8L3N2Zz4K";

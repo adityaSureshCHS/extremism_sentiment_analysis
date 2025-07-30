@@ -1,0 +1,19 @@
+var _path;
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+import * as React from "react";
+import { forwardRef } from "react";
+var SvgUserAdd = function SvgUserAdd(props, ref) {
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 24,
+    height: 24,
+    fill: "none",
+    ref: ref
+  }, props), _path || (_path = /*#__PURE__*/React.createElement("path", {
+    fill: "currentColor",
+    d: "M15 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8m0 1.9a2.1 2.1 0 1 1 0 4.2 2.1 2.1 0 0 1 0-4.2M4 7v3H1v2h3v3h2v-3h3v-2H6V7zm11 6c-2.67 0-8 1.33-8 4v3h16v-3c0-2.67-5.33-4-8-4m0 1.9c2.97 0 6.1 1.46 6.1 2.1v1.1H8.9V17c0-.64 3.1-2.1 6.1-2.1"
+  })));
+};
+var ForwardRef = /*#__PURE__*/forwardRef(SvgUserAdd);
+export { ForwardRef as ReactComponent };
+export default "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE1IDRDMTMuOTM5MSA0IDEyLjkyMTcgNC40MjE0MyAxMi4xNzE2IDUuMTcxNTdDMTEuNDIxNCA1LjkyMTcyIDExIDYuOTM5MTMgMTEgOEMxMSA5LjA2MDg3IDExLjQyMTQgMTAuMDc4MyAxMi4xNzE2IDEwLjgyODRDMTIuOTIxNyAxMS41Nzg2IDEzLjkzOTEgMTIgMTUgMTJDMTYuMDYwOSAxMiAxNy4wNzgzIDExLjU3ODYgMTcuODI4NCAxMC44Mjg0QzE4LjU3ODYgMTAuMDc4MyAxOSA5LjA2MDg3IDE5IDhDMTkgNi45MzkxMyAxOC41Nzg2IDUuOTIxNzIgMTcuODI4NCA1LjE3MTU3QzE3LjA3ODMgNC40MjE0MyAxNi4wNjA5IDQgMTUgNFpNMTUgNS45QzE2LjE2IDUuOSAxNy4xIDYuODQgMTcuMSA4QzE3LjEgOS4xNiAxNi4xNiAxMC4xIDE1IDEwLjFDMTQuNDQzIDEwLjEgMTMuOTA4OSA5Ljg3ODc1IDEzLjUxNTEgOS40ODQ5MkMxMy4xMjEyIDkuMDkxMSAxMi45IDguNTU2OTUgMTIuOSA4QzEyLjkgNy40NDMwNSAxMy4xMjEyIDYuOTA4OSAxMy41MTUxIDYuNTE1MDhDMTMuOTA4OSA2LjEyMTI1IDE0LjQ0MyA1LjkgMTUgNS45Wk00IDdWMTBIMVYxMkg0VjE1SDZWMTJIOVYxMEg2VjdINFpNMTUgMTNDMTIuMzMgMTMgNyAxNC4zMyA3IDE3VjIwSDIzVjE3QzIzIDE0LjMzIDE3LjY3IDEzIDE1IDEzWk0xNSAxNC45QzE3Ljk3IDE0LjkgMjEuMSAxNi4zNiAyMS4xIDE3VjE4LjFIOC45VjE3QzguOSAxNi4zNiAxMiAxNC45IDE1IDE0LjlaIiBmaWxsPSJjdXJyZW50Q29sb3IiLz4KPC9zdmc+Cg==";

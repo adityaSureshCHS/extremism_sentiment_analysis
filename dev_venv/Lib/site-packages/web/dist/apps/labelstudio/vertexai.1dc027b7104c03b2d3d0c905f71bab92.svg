@@ -1,0 +1,95 @@
+var _defs, _g;
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+import * as React from "react";
+import { forwardRef } from "react";
+var SvgVertexai = function SvgVertexai(props, ref) {
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 24,
+    height: 24,
+    viewBox: "0 0 512 512",
+    ref: ref
+  }, props), _defs || (_defs = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("style", null, ".vertexai_svg__cls-2,.vertexai_svg__cls-3,.vertexai_svg__cls-4,.vertexai_svg__cls-5{stroke-width:0}.vertexai_svg__cls-2{fill:#34a853}.vertexai_svg__cls-3{fill:#4285f4}.vertexai_svg__cls-4{fill:#ea4335}.vertexai_svg__cls-5{fill:#fbbc04}"))), /*#__PURE__*/React.createElement("g", {
+    id: "vertexai_svg__bounding_box"
+  }, /*#__PURE__*/React.createElement("path", {
+    id: "vertexai_svg__bounding_box-2",
+    d: "M0 0h512v512H0z",
+    style: {
+      strokeWidth: 0,
+      fill: "none"
+    }
+  })), _g || (_g = /*#__PURE__*/React.createElement("g", {
+    id: "vertexai_svg__art_layer"
+  }, /*#__PURE__*/React.createElement("path", {
+    d: "M128 249c-8.8 0-16-7.2-16-16V128c0-8.8 7.2-16 16-16s16 7.2 16 16v105c0 8.8-7.2 16-16 16",
+    className: "vertexai_svg__cls-4"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M256 464c-3 0-6-.8-8.6-2.5l-176-112c-7.5-4.7-9.7-14.6-4.9-22.1 4.8-7.5 14.6-9.6 22.1-4.9L256 429l167.4-106.5c7.5-4.7 17.3-2.5 22.1 4.9 4.7 7.5 2.5 17.3-4.9 22.1l-176 112c-2.6 1.7-5.6 2.5-8.6 2.5",
+    className: "vertexai_svg__cls-5"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M256 394c-8.8 0-16-7.2-16-16v-73.1c0-8.8 7.2-16 16-16s16 7.2 16 16V378c0 8.8-7.2 16-16 16",
+    className: "vertexai_svg__cls-2"
+  }), /*#__PURE__*/React.createElement("circle", {
+    cx: 128,
+    cy: 64,
+    r: 16,
+    className: "vertexai_svg__cls-4"
+  }), /*#__PURE__*/React.createElement("circle", {
+    cx: 128,
+    cy: 297,
+    r: 16,
+    className: "vertexai_svg__cls-4"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M384.2 314c-8.8 0-16-7.1-16-16l-.2-106c0-8.8 7.1-16 16-16 8.8 0 16 7.1 16 16l.2 106c0 8.8-7.1 16-16 16",
+    className: "vertexai_svg__cls-3"
+  }), /*#__PURE__*/React.createElement("circle", {
+    cx: 384,
+    cy: 64,
+    r: 16,
+    className: "vertexai_svg__cls-3"
+  }), /*#__PURE__*/React.createElement("circle", {
+    cx: 384,
+    cy: 128,
+    r: 16,
+    className: "vertexai_svg__cls-3"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M320 225c-8.8 0-16-7.2-16-16V106c0-8.8 7.2-16 16-16s16 7.2 16 16v103c0 8.8-7.2 16-16 16",
+    className: "vertexai_svg__cls-5"
+  }), /*#__PURE__*/React.createElement("circle", {
+    cx: 256,
+    cy: 177,
+    r: 16,
+    className: "vertexai_svg__cls-2"
+  }), /*#__PURE__*/React.createElement("circle", {
+    cx: 256,
+    cy: 241,
+    r: 16,
+    className: "vertexai_svg__cls-2"
+  }), /*#__PURE__*/React.createElement("circle", {
+    cx: 320,
+    cy: 273,
+    r: 16,
+    className: "vertexai_svg__cls-5"
+  }), /*#__PURE__*/React.createElement("circle", {
+    cx: 320,
+    cy: 337,
+    r: 16,
+    className: "vertexai_svg__cls-5"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M192 225c-8.8 0-16-7.2-16-16V106c0-8.8 7.2-16 16-16s16 7.2 16 16v103c0 8.8-7.2 16-16 16",
+    className: "vertexai_svg__cls-5"
+  }), /*#__PURE__*/React.createElement("circle", {
+    cx: 192,
+    cy: 273,
+    r: 16,
+    className: "vertexai_svg__cls-5"
+  }), /*#__PURE__*/React.createElement("circle", {
+    cx: 192,
+    cy: 337,
+    r: 16,
+    className: "vertexai_svg__cls-5"
+  }))));
+};
+var ForwardRef = /*#__PURE__*/forwardRef(SvgVertexai);
+export { ForwardRef as ReactComponent };
+export default "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDUxMiA1MTIiPjxkZWZzPjxzdHlsZT4uY2xzLTIsLmNscy0zLC5jbHMtNCwuY2xzLTV7c3Ryb2tlLXdpZHRoOjB9LmNscy0ye2ZpbGw6IzM0YTg1M30uY2xzLTN7ZmlsbDojNDI4NWY0fS5jbHMtNHtmaWxsOiNlYTQzMzV9LmNscy01e2ZpbGw6I2ZiYmMwNH08L3N0eWxlPjwvZGVmcz48ZyBpZD0iYm91bmRpbmdfYm94Ij48cGF0aCBpZD0iYm91bmRpbmdfYm94LTIiIGQ9Ik0wIDBoNTEydjUxMkgweiIgc3R5bGU9InN0cm9rZS13aWR0aDowO2ZpbGw6bm9uZSIvPjwvZz48ZyBpZD0iYXJ0X2xheWVyIj48cGF0aCBkPSJNMTI4IDI0OWMtOC44IDAtMTYtNy4yLTE2LTE2VjEyOGMwLTguOCA3LjItMTYgMTYtMTZzMTYgNy4yIDE2IDE2djEwNWMwIDguOC03LjIgMTYtMTYgMTZaIiBjbGFzcz0iY2xzLTQiLz48cGF0aCBkPSJNMjU2IDQ2NGMtMyAwLTYtLjgtOC42LTIuNWwtMTc2LTExMmMtNy41LTQuNy05LjctMTQuNi00LjktMjIuMSA0LjgtNy41IDE0LjYtOS42IDIyLjEtNC45TDI1NiA0MjlsMTY3LjQtMTA2LjVjNy41LTQuNyAxNy4zLTIuNSAyMi4xIDQuOSA0LjcgNy41IDIuNSAxNy4zLTQuOSAyMi4xbC0xNzYgMTEyYy0yLjYgMS43LTUuNiAyLjUtOC42IDIuNVoiIGNsYXNzPSJjbHMtNSIvPjxwYXRoIGQ9Ik0yNTYgMzk0Yy04LjggMC0xNi03LjItMTYtMTZ2LTczLjFjMC04LjggNy4yLTE2IDE2LTE2czE2IDcuMiAxNiAxNlYzNzhjMCA4LjgtNy4yIDE2LTE2IDE2WiIgY2xhc3M9ImNscy0yIi8+PGNpcmNsZSBjeD0iMTI4IiBjeT0iNjQiIHI9IjE2IiBjbGFzcz0iY2xzLTQiLz48Y2lyY2xlIGN4PSIxMjgiIGN5PSIyOTciIHI9IjE2IiBjbGFzcz0iY2xzLTQiLz48cGF0aCBkPSJNMzg0LjIgMzE0Yy04LjggMC0xNi03LjEtMTYtMTZsLS4yLTEwNmMwLTguOCA3LjEtMTYgMTYtMTYgOC44IDAgMTYgNy4xIDE2IDE2bC4yIDEwNmMwIDguOC03LjEgMTYtMTYgMTZaIiBjbGFzcz0iY2xzLTMiLz48Y2lyY2xlIGN4PSIzODQiIGN5PSI2NCIgcj0iMTYiIGNsYXNzPSJjbHMtMyIvPjxjaXJjbGUgY3g9IjM4NCIgY3k9IjEyOCIgcj0iMTYiIGNsYXNzPSJjbHMtMyIvPjxwYXRoIGQ9Ik0zMjAgMjI1Yy04LjggMC0xNi03LjItMTYtMTZWMTA2YzAtOC44IDcuMi0xNiAxNi0xNnMxNiA3LjIgMTYgMTZ2MTAzYzAgOC44LTcuMiAxNi0xNiAxNloiIGNsYXNzPSJjbHMtNSIvPjxjaXJjbGUgY3g9IjI1NiIgY3k9IjE3NyIgcj0iMTYiIGNsYXNzPSJjbHMtMiIvPjxjaXJjbGUgY3g9IjI1NiIgY3k9IjI0MSIgcj0iMTYiIGNsYXNzPSJjbHMtMiIvPjxjaXJjbGUgY3g9IjMyMCIgY3k9IjI3MyIgcj0iMTYiIGNsYXNzPSJjbHMtNSIvPjxjaXJjbGUgY3g9IjMyMCIgY3k9IjMzNyIgcj0iMTYiIGNsYXNzPSJjbHMtNSIvPjxwYXRoIGQ9Ik0xOTIgMjI1Yy04LjggMC0xNi03LjItMTYtMTZWMTA2YzAtOC44IDcuMi0xNiAxNi0xNnMxNiA3LjIgMTYgMTZ2MTAzYzAgOC44LTcuMiAxNi0xNiAxNloiIGNsYXNzPSJjbHMtNSIvPjxjaXJjbGUgY3g9IjE5MiIgY3k9IjI3MyIgcj0iMTYiIGNsYXNzPSJjbHMtNSIvPjxjaXJjbGUgY3g9IjE5MiIgY3k9IjMzNyIgcj0iMTYiIGNsYXNzPSJjbHMtNSIvPjwvZz48L3N2Zz4K";

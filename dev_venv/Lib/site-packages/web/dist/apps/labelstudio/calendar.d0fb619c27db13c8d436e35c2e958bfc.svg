@@ -1,0 +1,19 @@
+var _path;
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+import * as React from "react";
+import { forwardRef } from "react";
+var SvgCalendar = function SvgCalendar(props, ref) {
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 20,
+    height: 22,
+    fill: "none",
+    ref: ref
+  }, props), _path || (_path = /*#__PURE__*/React.createElement("path", {
+    fill: "#898098",
+    d: "M18 2h-1V0h-2v2H5V0H3v2H2C.9 2 0 2.9 0 4v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m0 18H2V9h16zm0-13H2V4h16z"
+  })));
+};
+var ForwardRef = /*#__PURE__*/forwardRef(SvgCalendar);
+export { ForwardRef as ReactComponent };
+export default "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCAyMCAyMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE4IDJIMTdWMEgxNVYySDVWMEgzVjJIMkMwLjkgMiAwIDIuOSAwIDRWMjBDMCAyMS4xIDAuOSAyMiAyIDIySDE4QzE5LjEgMjIgMjAgMjEuMSAyMCAyMFY0QzIwIDIuOSAxOS4xIDIgMTggMlpNMTggMjBIMlY5SDE4VjIwWk0xOCA3SDJWNEgxOFY3WiIgZmlsbD0iIzg5ODA5OCIvPgo8L3N2Zz4K";

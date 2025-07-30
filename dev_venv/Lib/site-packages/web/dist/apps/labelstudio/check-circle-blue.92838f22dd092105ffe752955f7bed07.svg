@@ -1,0 +1,27 @@
+var _circle, _path;
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+import * as React from "react";
+import { forwardRef } from "react";
+var SvgCheckCircleBlue = function SvgCheckCircleBlue(props, ref) {
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 19,
+    height: 21,
+    fill: "none",
+    ref: ref
+  }, props), _circle || (_circle = /*#__PURE__*/React.createElement("circle", {
+    cx: 9.666,
+    cy: 12,
+    r: 8.554,
+    stroke: "#57B7AB",
+    strokeWidth: 0.893
+  })), _path || (_path = /*#__PURE__*/React.createElement("path", {
+    stroke: "#57B7AB",
+    strokeLinecap: "square",
+    strokeLinejoin: "round",
+    d: "m5.75 11.49 2.865 2.864 5.208-5.208"
+  })));
+};
+var ForwardRef = /*#__PURE__*/forwardRef(SvgCheckCircleBlue);
+export { ForwardRef as ReactComponent };
+export default "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkiIGhlaWdodD0iMjEiIHZpZXdCb3g9IjAgMCAxOSAyMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iOS42NjY1IiBjeT0iMTIiIHI9IjguNTUzNTciIHN0cm9rZT0iIzU3QjdBQiIgc3Ryb2tlLXdpZHRoPSIwLjg5Mjg1NyIvPgo8cGF0aCBkPSJNNS43NSAxMS40ODk2TDguNjE0NTggMTQuMzU0MkwxMy44MjI5IDkuMTQ1ODciIHN0cm9rZT0iIzU3QjdBQiIgc3Ryb2tlLWxpbmVjYXA9InNxdWFyZSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K";

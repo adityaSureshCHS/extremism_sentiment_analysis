@@ -1,0 +1,78 @@
+var _g, _circle, _circle2, _path, _defs;
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+import * as React from "react";
+import { forwardRef } from "react";
+var SvgMastercard = function SvgMastercard(props, ref) {
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 60,
+    height: 42,
+    fill: "none",
+    ref: ref
+  }, props), _g || (_g = /*#__PURE__*/React.createElement("g", {
+    filter: "url(#mastercard_svg__a)"
+  }, /*#__PURE__*/React.createElement("rect", {
+    width: 48,
+    height: 30,
+    x: 6,
+    y: 3,
+    fill: "#fff",
+    rx: 2
+  }))), _circle || (_circle = /*#__PURE__*/React.createElement("circle", {
+    cx: 37,
+    cy: 18,
+    r: 10,
+    fill: "#F79E1B"
+  })), _circle2 || (_circle2 = /*#__PURE__*/React.createElement("circle", {
+    cx: 23,
+    cy: 18,
+    r: 10,
+    fill: "#EB001B"
+  })), _path || (_path = /*#__PURE__*/React.createElement("path", {
+    fill: "#FF5F00",
+    d: "M30 25.142A9.97 9.97 0 0 0 33 18a9.97 9.97 0 0 0-3-7.141A9.97 9.97 0 0 0 27 18a9.97 9.97 0 0 0 3 7.142"
+  })), _defs || (_defs = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("filter", {
+    id: "mastercard_svg__a",
+    width: 60,
+    height: 42,
+    x: 0,
+    y: 0,
+    colorInterpolationFilters: "sRGB",
+    filterUnits: "userSpaceOnUse"
+  }, /*#__PURE__*/React.createElement("feFlood", {
+    floodOpacity: 0,
+    result: "BackgroundImageFix"
+  }), /*#__PURE__*/React.createElement("feColorMatrix", {
+    "in": "SourceAlpha",
+    values: "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+  }), /*#__PURE__*/React.createElement("feOffset", {
+    dy: 3
+  }), /*#__PURE__*/React.createElement("feGaussianBlur", {
+    stdDeviation: 3
+  }), /*#__PURE__*/React.createElement("feColorMatrix", {
+    values: "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
+  }), /*#__PURE__*/React.createElement("feBlend", {
+    in2: "BackgroundImageFix",
+    result: "effect1_dropShadow"
+  }), /*#__PURE__*/React.createElement("feColorMatrix", {
+    "in": "SourceAlpha",
+    values: "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+  }), /*#__PURE__*/React.createElement("feMorphology", {
+    "in": "SourceAlpha",
+    operator: "dilate",
+    radius: 1,
+    result: "effect2_dropShadow"
+  }), /*#__PURE__*/React.createElement("feOffset", null), /*#__PURE__*/React.createElement("feColorMatrix", {
+    values: "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0"
+  }), /*#__PURE__*/React.createElement("feBlend", {
+    in2: "effect1_dropShadow",
+    result: "effect2_dropShadow"
+  }), /*#__PURE__*/React.createElement("feBlend", {
+    "in": "SourceGraphic",
+    in2: "effect2_dropShadow",
+    result: "shape"
+  })))));
+};
+var ForwardRef = /*#__PURE__*/forwardRef(SvgMastercard);
+export { ForwardRef as ReactComponent };
+export default "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNDIiIHZpZXdCb3g9IjAgMCA2MCA0MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgZmlsdGVyPSJ1cmwoI2ZpbHRlcjBfZGQpIj4KPHJlY3QgeD0iNiIgeT0iMyIgd2lkdGg9IjQ4IiBoZWlnaHQ9IjMwIiByeD0iMiIgZmlsbD0id2hpdGUiLz4KPC9nPgo8Y2lyY2xlIGN4PSIzNyIgY3k9IjE4IiByPSIxMCIgZmlsbD0iI0Y3OUUxQiIvPgo8Y2lyY2xlIGN4PSIyMyIgY3k9IjE4IiByPSIxMCIgZmlsbD0iI0VCMDAxQiIvPgo8cGF0aCBkPSJNMzAgMjUuMTQxNUMzMS44NTE0IDIzLjMyNjYgMzMgMjAuNzk3NSAzMyAxOC4wMDAxQzMzIDE1LjIwMjcgMzEuODUxNCAxMi42NzM2IDMwIDEwLjg1ODZDMjguMTQ4NiAxMi42NzM2IDI3IDE1LjIwMjcgMjcgMTguMDAwMUMyNyAyMC43OTc1IDI4LjE0ODYgMjMuMzI2NiAzMCAyNS4xNDE1WiIgZmlsbD0iI0ZGNUYwMCIvPgo8ZGVmcz4KPGZpbHRlciBpZD0iZmlsdGVyMF9kZCIgeD0iMCIgeT0iMCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjQyIiBmaWx0ZXJVbml0cz0idXNlclNwYWNlT25Vc2UiIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiI+CjxmZUZsb29kIGZsb29kLW9wYWNpdHk9IjAiIHJlc3VsdD0iQmFja2dyb3VuZEltYWdlRml4Ii8+CjxmZUNvbG9yTWF0cml4IGluPSJTb3VyY2VBbHBoYSIgdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDEyNyAwIi8+CjxmZU9mZnNldCBkeT0iMyIvPgo8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIzIi8+CjxmZUNvbG9yTWF0cml4IHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwLjEgMCIvPgo8ZmVCbGVuZCBtb2RlPSJub3JtYWwiIGluMj0iQmFja2dyb3VuZEltYWdlRml4IiByZXN1bHQ9ImVmZmVjdDFfZHJvcFNoYWRvdyIvPgo8ZmVDb2xvck1hdHJpeCBpbj0iU291cmNlQWxwaGEiIHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAxMjcgMCIvPgo8ZmVNb3JwaG9sb2d5IHJhZGl1cz0iMSIgb3BlcmF0b3I9ImRpbGF0ZSIgaW49IlNvdXJjZUFscGhhIiByZXN1bHQ9ImVmZmVjdDJfZHJvcFNoYWRvdyIvPgo8ZmVPZmZzZXQvPgo8ZmVDb2xvck1hdHJpeCB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMC4wOCAwIi8+CjxmZUJsZW5kIG1vZGU9Im5vcm1hbCIgaW4yPSJlZmZlY3QxX2Ryb3BTaGFkb3ciIHJlc3VsdD0iZWZmZWN0Ml9kcm9wU2hhZG93Ii8+CjxmZUJsZW5kIG1vZGU9Im5vcm1hbCIgaW49IlNvdXJjZUdyYXBoaWMiIGluMj0iZWZmZWN0Ml9kcm9wU2hhZG93IiByZXN1bHQ9InNoYXBlIi8+CjwvZmlsdGVyPgo8L2RlZnM+Cjwvc3ZnPgo=";

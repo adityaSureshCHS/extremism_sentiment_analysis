@@ -1,0 +1,53 @@
+var _circle, _circle2, _circle3;
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+import * as React from "react";
+import { forwardRef } from "react";
+var SvgBouncing3Dots = function SvgBouncing3Dots(props, ref) {
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 24,
+    height: 24,
+    ref: ref
+  }, props), _circle || (_circle = /*#__PURE__*/React.createElement("circle", {
+    cx: 4,
+    cy: 12,
+    r: 3,
+    fill: "currentColor"
+  }, /*#__PURE__*/React.createElement("animate", {
+    id: "bouncing-3-dots_svg__b",
+    attributeName: "cy",
+    begin: "0;a.end+0.25s",
+    calcMode: "spline",
+    dur: "0.6s",
+    keySplines: ".33,.66,.66,1;.33,0,.66,.33",
+    values: "12;6;12"
+  }))), _circle2 || (_circle2 = /*#__PURE__*/React.createElement("circle", {
+    cx: 12,
+    cy: 12,
+    r: 3,
+    fill: "currentColor"
+  }, /*#__PURE__*/React.createElement("animate", {
+    attributeName: "cy",
+    begin: "b.begin+0.1s",
+    calcMode: "spline",
+    dur: "0.6s",
+    keySplines: ".33,.66,.66,1;.33,0,.66,.33",
+    values: "12;6;12"
+  }))), _circle3 || (_circle3 = /*#__PURE__*/React.createElement("circle", {
+    cx: 20,
+    cy: 12,
+    r: 3,
+    fill: "currentColor"
+  }, /*#__PURE__*/React.createElement("animate", {
+    id: "bouncing-3-dots_svg__a",
+    attributeName: "cy",
+    begin: "b.begin+0.2s",
+    calcMode: "spline",
+    dur: "0.6s",
+    keySplines: ".33,.66,.66,1;.33,0,.66,.33",
+    values: "12;6;12"
+  }))));
+};
+var ForwardRef = /*#__PURE__*/forwardRef(SvgBouncing3Dots);
+export { ForwardRef as ReactComponent };
+export default "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICA8Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+CiAgICA8YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c0JvdW5jZTAiIGF0dHJpYnV0ZU5hbWU9ImN5IiBiZWdpbj0iMDtzdmdTcGlubmVyczNEb3RzQm91bmNlMS5lbmQrMC4yNXMiIGNhbGNNb2RlPSJzcGxpbmUiIGR1cj0iMC42cyIga2V5U3BsaW5lcz0iLjMzLC42NiwuNjYsMTsuMzMsMCwuNjYsLjMzIiB2YWx1ZXM9IjEyOzY7MTIiLz4KICA8L2NpcmNsZT4KICA8Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIzIiBmaWxsPSJjdXJyZW50Q29sb3IiPgogICAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iY3kiIGJlZ2luPSJzdmdTcGlubmVyczNEb3RzQm91bmNlMC5iZWdpbiswLjFzIiBjYWxjTW9kZT0ic3BsaW5lIiBkdXI9IjAuNnMiIGtleVNwbGluZXM9Ii4zMywuNjYsLjY2LDE7LjMzLDAsLjY2LC4zMyIgdmFsdWVzPSIxMjs2OzEyIi8+CiAgPC9jaXJjbGU+CiAgPGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj4KICAgIDxhbmltYXRlIGlkPSJzdmdTcGlubmVyczNEb3RzQm91bmNlMSIgYXR0cmlidXRlTmFtZT0iY3kiIGJlZ2luPSJzdmdTcGlubmVyczNEb3RzQm91bmNlMC5iZWdpbiswLjJzIiBjYWxjTW9kZT0ic3BsaW5lIiBkdXI9IjAuNnMiIGtleVNwbGluZXM9Ii4zMywuNjYsLjY2LDE7LjMzLDAsLjY2LC4zMyIgdmFsdWVzPSIxMjs2OzEyIi8+CiAgPC9jaXJjbGU+Cjwvc3ZnPg==";

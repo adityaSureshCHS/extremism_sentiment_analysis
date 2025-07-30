@@ -1,0 +1,28 @@
+var _rect, _rect2;
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+import * as React from "react";
+import { forwardRef } from "react";
+var SvgPause = function SvgPause(props, ref) {
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 16,
+    height: 16,
+    fill: "currentColor",
+    ref: ref
+  }, props), _rect || (_rect = /*#__PURE__*/React.createElement("rect", {
+    width: 5,
+    height: 14,
+    x: 10,
+    y: 1,
+    rx: 1.5
+  })), _rect2 || (_rect2 = /*#__PURE__*/React.createElement("rect", {
+    width: 5,
+    height: 14,
+    x: 1,
+    y: 1,
+    rx: 1.5
+  })));
+};
+var ForwardRef = /*#__PURE__*/forwardRef(SvgPause);
+export { ForwardRef as ReactComponent };
+export default "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBmaWxsPSJjdXJyZW50Q29sb3IiPgogICAgPGc+CiAgICAgICAgPHJlY3QgeD0iMTAiIHk9IjEiIHdpZHRoPSI1IiBoZWlnaHQ9IjE0IiByeD0iMS41IiAvPgogICAgICAgIDxyZWN0IHg9IjEiIHk9IjEiIHdpZHRoPSI1IiBoZWlnaHQ9IjE0IiByeD0iMS41IiAvPgogICAgPC9nPgo8L3N2Zz4=";

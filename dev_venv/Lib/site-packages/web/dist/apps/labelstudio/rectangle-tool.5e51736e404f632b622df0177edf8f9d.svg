@@ -1,0 +1,53 @@
+var _path, _g, _defs;
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+import * as React from "react";
+import { forwardRef } from "react";
+var SvgRectangleTool = function SvgRectangleTool(props, ref) {
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 24,
+    height: 24,
+    fill: "none",
+    ref: ref
+  }, props), _path || (_path = /*#__PURE__*/React.createElement("path", {
+    fill: "currentColor",
+    d: "M3.75 5.25h12c2.121 0 3.182 0 3.841.659.659.659.659 1.72.659 3.841v9h-12c-2.121 0-3.182 0-3.841-.659-.659-.66-.659-1.72-.659-3.841z",
+    opacity: 0.4
+  })), _g || (_g = /*#__PURE__*/React.createElement("g", {
+    fill: "currentColor",
+    filter: "url(#rectangle-tool_svg__a)"
+  }, /*#__PURE__*/React.createElement("path", {
+    d: "M21 17.625a1.875 1.875 0 1 0-3.75 0 1.875 1.875 0 0 0 3.75 0M6.75 6.375a1.875 1.875 0 1 0-3.75 0 1.875 1.875 0 0 0 3.75 0"
+  }))), _defs || (_defs = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("filter", {
+    id: "rectangle-tool_svg__a",
+    width: 24,
+    height: 21,
+    x: 0,
+    y: 2.5,
+    colorInterpolationFilters: "sRGB",
+    filterUnits: "userSpaceOnUse"
+  }, /*#__PURE__*/React.createElement("feFlood", {
+    floodOpacity: 0,
+    result: "BackgroundImageFix"
+  }), /*#__PURE__*/React.createElement("feColorMatrix", {
+    "in": "SourceAlpha",
+    result: "hardAlpha",
+    values: "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+  }), /*#__PURE__*/React.createElement("feOffset", {
+    dy: 1
+  }), /*#__PURE__*/React.createElement("feGaussianBlur", {
+    stdDeviation: 1.5
+  }), /*#__PURE__*/React.createElement("feColorMatrix", {
+    values: "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"
+  }), /*#__PURE__*/React.createElement("feBlend", {
+    in2: "BackgroundImageFix",
+    result: "effect1_dropShadow_4490_28196"
+  }), /*#__PURE__*/React.createElement("feBlend", {
+    "in": "SourceGraphic",
+    in2: "effect1_dropShadow_4490_28196",
+    result: "shape"
+  })))));
+};
+var ForwardRef = /*#__PURE__*/forwardRef(SvgRectangleTool);
+export { ForwardRef as ReactComponent };
+export default "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggb3BhY2l0eT0iMC40IiBkPSJNMy43NSA1LjI1SDE1Ljc1QzE3Ljg3MTMgNS4yNSAxOC45MzE5IDUuMjUgMTkuNTkxIDUuOTA5MDFDMjAuMjUgNi41NjgwMiAyMC4yNSA3LjYyODcgMjAuMjUgOS43NVYxOC43NUg4LjI1QzYuMTI4NjggMTguNzUgNS4wNjgwMiAxOC43NSA0LjQwOTAxIDE4LjA5MUMzLjc1IDE3LjQzMTkgMy43NSAxNi4zNzEzIDMuNzUgMTQuMjVWNS4yNVoiIGZpbGw9ImN1cnJlbnRDb2xvciIvPgo8ZyBmaWx0ZXI9InVybCgjZmlsdGVyMF9kXzQ0OTBfMjgxOTYpIj4KPHBhdGggZD0iTTIxIDE3LjYyNUMyMSAxNi41ODk1IDIwLjE2MDUgMTUuNzUgMTkuMTI1IDE1Ljc1QzE4LjA4OTUgMTUuNzUgMTcuMjUgMTYuNTg5NSAxNy4yNSAxNy42MjVDMTcuMjUgMTguNjYwNSAxOC4wODk1IDE5LjUgMTkuMTI1IDE5LjVDMjAuMTYwNSAxOS41IDIxIDE4LjY2MDUgMjEgMTcuNjI1WiIgZmlsbD0iY3VycmVudENvbG9yIi8+CjxwYXRoIGQ9Ik02Ljc1IDYuMzc1QzYuNzUgNS4zMzk0NyA1LjkxMDUzIDQuNSA0Ljg3NSA0LjVDMy44Mzk0NyA0LjUgMyA1LjMzOTQ3IDMgNi4zNzVDMyA3LjQxMDUzIDMuODM5NDcgOC4yNSA0Ljg3NSA4LjI1QzUuOTEwNTMgOC4yNSA2Ljc1IDcuNDEwNTMgNi43NSA2LjM3NVoiIGZpbGw9ImN1cnJlbnRDb2xvciIvPgo8L2c+CjxkZWZzPgo8ZmlsdGVyIGlkPSJmaWx0ZXIwX2RfNDQ5MF8yODE5NiIgeD0iMCIgeT0iMi41IiB3aWR0aD0iMjQiIGhlaWdodD0iMjEiIGZpbHRlclVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY29sb3ItaW50ZXJwb2xhdGlvbi1maWx0ZXJzPSJzUkdCIj4KPGZlRmxvb2QgZmxvb2Qtb3BhY2l0eT0iMCIgcmVzdWx0PSJCYWNrZ3JvdW5kSW1hZ2VGaXgiLz4KPGZlQ29sb3JNYXRyaXggaW49IlNvdXJjZUFscGhhIiB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMTI3IDAiIHJlc3VsdD0iaGFyZEFscGhhIi8+CjxmZU9mZnNldCBkeT0iMSIvPgo8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIxLjUiLz4KPGZlQ29sb3JNYXRyaXggdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAuNCAwIi8+CjxmZUJsZW5kIG1vZGU9Im5vcm1hbCIgaW4yPSJCYWNrZ3JvdW5kSW1hZ2VGaXgiIHJlc3VsdD0iZWZmZWN0MV9kcm9wU2hhZG93XzQ0OTBfMjgxOTYiLz4KPGZlQmxlbmQgbW9kZT0ibm9ybWFsIiBpbj0iU291cmNlR3JhcGhpYyIgaW4yPSJlZmZlY3QxX2Ryb3BTaGFkb3dfNDQ5MF8yODE5NiIgcmVzdWx0PSJzaGFwZSIvPgo8L2ZpbHRlcj4KPC9kZWZzPgo8L3N2Zz4K";

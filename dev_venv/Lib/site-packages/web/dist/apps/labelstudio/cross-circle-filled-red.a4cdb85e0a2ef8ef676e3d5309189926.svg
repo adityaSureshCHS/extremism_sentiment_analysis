@@ -1,0 +1,24 @@
+var _circle, _path;
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+import * as React from "react";
+import { forwardRef } from "react";
+var SvgCrossCircleFilledRed = function SvgCrossCircleFilledRed(props, ref) {
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 30,
+    height: 30,
+    fill: "none",
+    ref: ref
+  }, props), _circle || (_circle = /*#__PURE__*/React.createElement("circle", {
+    cx: 14.834,
+    cy: 15,
+    r: 14.25,
+    fill: "#F5222D"
+  })), _path || (_path = /*#__PURE__*/React.createElement("path", {
+    fill: "#fff",
+    d: "m21.002 9.994-1.163-1.162-4.61 4.61-4.61-4.61-1.162 1.162 4.61 4.61-4.61 4.61 1.162 1.163 4.61-4.61 4.61 4.61 1.163-1.163-4.61-4.61z"
+  })));
+};
+var ForwardRef = /*#__PURE__*/forwardRef(SvgCrossCircleFilledRed);
+export { ForwardRef as ReactComponent };
+export default "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxjaXJjbGUgY3g9IjE0LjgzMzUiIGN5PSIxNSIgcj0iMTQuMjUiIGZpbGw9IiNGNTIyMkQiLz4KICAgIDxwYXRoIGQ9Ik0yMS4wMDE3IDkuOTk0NDNMMTkuODM4OSA4LjgzMTY3TDE1LjIyOTEgMTMuNDQxNUwxMC42MTkzIDguODMxNjdMOS40NTY1NCA5Ljk5NDQzTDE0LjA2NjQgMTQuNjA0Mkw5LjQ1NjU0IDE5LjIxNEwxMC42MTkzIDIwLjM3NjhMMTUuMjI5MSAxNS43NjdMMTkuODM4OSAyMC4zNzY4TDIxLjAwMTcgMTkuMjE0TDE2LjM5MTkgMTQuNjA0MkwyMS4wMDE3IDkuOTk0NDNaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K";

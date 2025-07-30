@@ -1,0 +1,27 @@
+var _circle, _path, _path2;
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+import * as React from "react";
+import { forwardRef } from "react";
+var SvgCheckCircleFilledGreen = function SvgCheckCircleFilledGreen(props, ref) {
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 30,
+    height: 30,
+    fill: "none",
+    ref: ref
+  }, props), _circle || (_circle = /*#__PURE__*/React.createElement("circle", {
+    cx: 14.834,
+    cy: 15,
+    r: 14.25,
+    fill: "#57B7AB"
+  })), _path || (_path = /*#__PURE__*/React.createElement("path", {
+    fill: "#57B7AB",
+    d: "M5.334 4.708h19.792V24.5H5.334z"
+  })), _path2 || (_path2 = /*#__PURE__*/React.createElement("path", {
+    fill: "#fff",
+    d: "M12.586 17.8 9.148 14.36l-1.171 1.163 4.61 4.61 9.895-9.896-1.163-1.163z"
+  })));
+};
+var ForwardRef = /*#__PURE__*/forwardRef(SvgCheckCircleFilledGreen);
+export { ForwardRef as ReactComponent };
+export default "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxjaXJjbGUgY3g9IjE0LjgzMzUiIGN5PSIxNSIgcj0iMTQuMjUiIGZpbGw9IiM1N0I3QUIiLz4KICAgIDxyZWN0IHdpZHRoPSIxOS43OTE3IiBoZWlnaHQ9IjE5Ljc5MTciIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUuMzMzNSA0LjcwODM3KSIgZmlsbD0iIzU3QjdBQiIvPgogICAgPHBhdGggZD0iTTEyLjU4NjQgMTcuNzk5OEw5LjE0NzU3IDE0LjM2MUw3Ljk3NjU2IDE1LjUyMzdMMTIuNTg2NCAyMC4xMzM1TDIyLjQ4MjIgMTAuMjM3N0wyMS4zMTk0IDkuMDc0OTVMMTIuNTg2NCAxNy43OTk4WiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg==";

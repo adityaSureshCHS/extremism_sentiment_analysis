@@ -1,0 +1,140 @@
+var _path, _path2, _path3, _defs;
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+import * as React from "react";
+import { forwardRef } from "react";
+var SvgAzureAiFoundry = function SvgAzureAiFoundry(props, ref) {
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 24,
+    height: 24,
+    fill: "none",
+    ref: ref
+  }, props), _path || (_path = /*#__PURE__*/React.createElement("path", {
+    fill: "url(#azure-ai-foundry_svg__a)",
+    fillRule: "evenodd",
+    d: "M15.772.91c.659 0 1.243.51 1.453 1.228.21.72 1.437 5.167 1.437 5.167v8.836h-4.448l.09-15.23z",
+    clipRule: "evenodd"
+  })), _path2 || (_path2 = /*#__PURE__*/React.createElement("path", {
+    fill: "url(#azure-ai-foundry_svg__b)",
+    d: "M22.302 7.814a.553.553 0 0 0-.554-.554h-2.621a3.343 3.343 0 0 0-3.34 3.34v5.541h3.175a3.343 3.343 0 0 0 3.34-3.34z"
+  })), _path3 || (_path3 = /*#__PURE__*/React.createElement("path", {
+    fill: "url(#azure-ai-foundry_svg__c)",
+    fillRule: "evenodd",
+    d: "M15.772.91a.908.908 0 0 0-.914.914l-.09 16.818a4.449 4.449 0 0 1-4.447 4.448H2.248a.552.552 0 0 1-.524-.734L8.194 3.89A4.453 4.453 0 0 1 12.387.91h3.4z",
+    clipRule: "evenodd"
+  })), _defs || (_defs = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
+    id: "azure-ai-foundry_svg__a",
+    x1: 17.629,
+    x2: 13.885,
+    y1: 16.471,
+    y2: 1.479,
+    gradientUnits: "userSpaceOnUse"
+  }, /*#__PURE__*/React.createElement("stop", {
+    stopColor: "#712575"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 0.09,
+    stopColor: "#9A2884"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 0.18,
+    stopColor: "#BF2C92"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 0.27,
+    stopColor: "#DA2E9C"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 0.34,
+    stopColor: "#EB30A2"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 0.4,
+    stopColor: "#F131A5"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 0.5,
+    stopColor: "#EC30A3"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 0.61,
+    stopColor: "#DF2F9E"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 0.72,
+    stopColor: "#C92D96"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 0.83,
+    stopColor: "#AA2A8A"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 0.95,
+    stopColor: "#83267C"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 1,
+    stopColor: "#712575"
+  })), /*#__PURE__*/React.createElement("linearGradient", {
+    id: "azure-ai-foundry_svg__b",
+    x1: 19.052,
+    x2: 19.052,
+    y1: 1.225,
+    y2: 22.371,
+    gradientUnits: "userSpaceOnUse"
+  }, /*#__PURE__*/React.createElement("stop", {
+    stopColor: "#DA7ED0"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 0.08,
+    stopColor: "#B17BD5"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 0.19,
+    stopColor: "#8778DB"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 0.3,
+    stopColor: "#6276E1"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 0.41,
+    stopColor: "#4574E5"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 0.54,
+    stopColor: "#2E72E8"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 0.67,
+    stopColor: "#1D71EB"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 0.81,
+    stopColor: "#1471EC"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 1,
+    stopColor: "#1171ED"
+  })), /*#__PURE__*/React.createElement("linearGradient", {
+    id: "azure-ai-foundry_svg__c",
+    x1: 17.779,
+    x2: 3.761,
+    y1: 1.704,
+    y2: 24.183,
+    gradientUnits: "userSpaceOnUse"
+  }, /*#__PURE__*/React.createElement("stop", {
+    stopColor: "#DA7ED0"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 0.05,
+    stopColor: "#B77BD4"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 0.11,
+    stopColor: "#9079DA"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 0.18,
+    stopColor: "#6E77DF"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 0.25,
+    stopColor: "#5175E3"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 0.33,
+    stopColor: "#3973E7"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 0.42,
+    stopColor: "#2772E9"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 0.54,
+    stopColor: "#1A71EB"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 0.68,
+    stopColor: "#1371EC"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: 1,
+    stopColor: "#1171ED"
+  })))));
+};
+var ForwardRef = /*#__PURE__*/forwardRef(SvgAzureAiFoundry);
+export { ForwardRef as ReactComponent };
+export default "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0idXJsKCNhKSIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMTUuNzcyLjkxYy42NTkgMCAxLjI0My41MSAxLjQ1MyAxLjIyOC4yMS43MiAxLjQzNyA1LjE2NyAxLjQzNyA1LjE2N3Y4LjgzNmgtNC40NDhsLjA5LTE1LjIzaDEuNDY4WiIgY2xpcC1ydWxlPSJldmVub2RkIi8+PHBhdGggZmlsbD0idXJsKCNiKSIgZD0iTTIyLjMwMiA3LjgxNGEuNTUzLjU1MyAwIDAgMC0uNTU0LS41NTRoLTIuNjIxYTMuMzQzIDMuMzQzIDAgMCAwLTMuMzQgMy4zNHY1LjU0MWgzLjE3NWEzLjM0MyAzLjM0MyAwIDAgMCAzLjM0LTMuMzRWNy44MTRaIi8+PHBhdGggZmlsbD0idXJsKCNjKSIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMTUuNzcyLjkxYS45MDguOTA4IDAgMCAwLS45MTQuOTE0bC0uMDkgMTYuODE4YTQuNDQ5IDQuNDQ5IDAgMCAxLTQuNDQ3IDQuNDQ4SDIuMjQ4YS41NTIuNTUyIDAgMCAxLS41MjQtLjczNEw4LjE5NCAzLjg5QTQuNDUzIDQuNDUzIDAgMCAxIDEyLjM4Ny45MWgzLjQtLjAxNVoiIGNsaXAtcnVsZT0iZXZlbm9kZCIvPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iYSIgeDE9IjE3LjYyOSIgeDI9IjEzLjg4NSIgeTE9IjE2LjQ3MSIgeTI9IjEuNDc5IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agc3RvcC1jb2xvcj0iIzcxMjU3NSIvPjxzdG9wIG9mZnNldD0iLjA5IiBzdG9wLWNvbG9yPSIjOUEyODg0Ii8+PHN0b3Agb2Zmc2V0PSIuMTgiIHN0b3AtY29sb3I9IiNCRjJDOTIiLz48c3RvcCBvZmZzZXQ9Ii4yNyIgc3RvcC1jb2xvcj0iI0RBMkU5QyIvPjxzdG9wIG9mZnNldD0iLjM0IiBzdG9wLWNvbG9yPSIjRUIzMEEyIi8+PHN0b3Agb2Zmc2V0PSIuNCIgc3RvcC1jb2xvcj0iI0YxMzFBNSIvPjxzdG9wIG9mZnNldD0iLjUiIHN0b3AtY29sb3I9IiNFQzMwQTMiLz48c3RvcCBvZmZzZXQ9Ii42MSIgc3RvcC1jb2xvcj0iI0RGMkY5RSIvPjxzdG9wIG9mZnNldD0iLjcyIiBzdG9wLWNvbG9yPSIjQzkyRDk2Ii8+PHN0b3Agb2Zmc2V0PSIuODMiIHN0b3AtY29sb3I9IiNBQTJBOEEiLz48c3RvcCBvZmZzZXQ9Ii45NSIgc3RvcC1jb2xvcj0iIzgzMjY3QyIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzcxMjU3NSIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJiIiB4MT0iMTkuMDUyIiB4Mj0iMTkuMDUyIiB5MT0iMS4yMjUiIHkyPSIyMi4zNzEiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBzdG9wLWNvbG9yPSIjREE3RUQwIi8+PHN0b3Agb2Zmc2V0PSIuMDgiIHN0b3AtY29sb3I9IiNCMTdCRDUiLz48c3RvcCBvZmZzZXQ9Ii4xOSIgc3RvcC1jb2xvcj0iIzg3NzhEQiIvPjxzdG9wIG9mZnNldD0iLjMiIHN0b3AtY29sb3I9IiM2Mjc2RTEiLz48c3RvcCBvZmZzZXQ9Ii40MSIgc3RvcC1jb2xvcj0iIzQ1NzRFNSIvPjxzdG9wIG9mZnNldD0iLjU0IiBzdG9wLWNvbG9yPSIjMkU3MkU4Ii8+PHN0b3Agb2Zmc2V0PSIuNjciIHN0b3AtY29sb3I9IiMxRDcxRUIiLz48c3RvcCBvZmZzZXQ9Ii44MSIgc3RvcC1jb2xvcj0iIzE0NzFFQyIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzExNzFFRCIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJjIiB4MT0iMTcuNzc5IiB4Mj0iMy43NjEiIHkxPSIxLjcwNCIgeTI9IjI0LjE4MyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIHN0b3AtY29sb3I9IiNEQTdFRDAiLz48c3RvcCBvZmZzZXQ9Ii4wNSIgc3RvcC1jb2xvcj0iI0I3N0JENCIvPjxzdG9wIG9mZnNldD0iLjExIiBzdG9wLWNvbG9yPSIjOTA3OURBIi8+PHN0b3Agb2Zmc2V0PSIuMTgiIHN0b3AtY29sb3I9IiM2RTc3REYiLz48c3RvcCBvZmZzZXQ9Ii4yNSIgc3RvcC1jb2xvcj0iIzUxNzVFMyIvPjxzdG9wIG9mZnNldD0iLjMzIiBzdG9wLWNvbG9yPSIjMzk3M0U3Ii8+PHN0b3Agb2Zmc2V0PSIuNDIiIHN0b3AtY29sb3I9IiMyNzcyRTkiLz48c3RvcCBvZmZzZXQ9Ii41NCIgc3RvcC1jb2xvcj0iIzFBNzFFQiIvPjxzdG9wIG9mZnNldD0iLjY4IiBzdG9wLWNvbG9yPSIjMTM3MUVDIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMTE3MUVEIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PC9zdmc+Cg==";

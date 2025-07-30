@@ -1,0 +1,26 @@
+var _path, _path2;
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+import * as React from "react";
+import { forwardRef } from "react";
+var SvgBlueCheckmark = function SvgBlueCheckmark(props, ref) {
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 18,
+    height: 18,
+    fill: "none",
+    ref: ref
+  }, props), _path || (_path = /*#__PURE__*/React.createElement("path", {
+    fill: "#617ADA",
+    fillRule: "evenodd",
+    d: "M9 17.107A8.107 8.107 0 1 0 9 .893a8.107 8.107 0 0 0 0 16.214M9 18A9 9 0 1 0 9 0a9 9 0 0 0 0 18",
+    clipRule: "evenodd"
+  })), _path2 || (_path2 = /*#__PURE__*/React.createElement("path", {
+    fill: "#617ADA",
+    fillRule: "evenodd",
+    d: "m13.863 7.146-5.562 5.562a.5.5 0 0 1-.707 0L4.376 9.49l.707-.708 2.865 2.865 5.208-5.208z",
+    clipRule: "evenodd"
+  })));
+};
+var ForwardRef = /*#__PURE__*/forwardRef(SvgBlueCheckmark);
+export { ForwardRef as ReactComponent };
+export default "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik05IDE3LjEwNzFDMTMuNDc3NSAxNy4xMDcxIDE3LjEwNzEgMTMuNDc3NSAxNy4xMDcxIDlDMTcuMTA3MSA0LjUyMjU1IDEzLjQ3NzUgMC44OTI4NTcgOSAwLjg5Mjg1N0M0LjUyMjU1IDAuODkyODU3IDAuODkyODU3IDQuNTIyNTUgMC44OTI4NTcgOUMwLjg5Mjg1NyAxMy40Nzc1IDQuNTIyNTUgMTcuMTA3MSA5IDE3LjEwNzFaTTkgMThDMTMuOTcwNiAxOCAxOCAxMy45NzA2IDE4IDlDMTggNC4wMjk0NCAxMy45NzA2IDAgOSAwQzQuMDI5NDQgMCAwIDQuMDI5NDQgMCA5QzAgMTMuOTcwNiA0LjAyOTQ0IDE4IDkgMThaIiBmaWxsPSIjNjE3QURBIi8+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTMuODYzNCA3LjE0NTg0TDguMzAxNDYgMTIuNzA3N0M4LjEwNjIgMTIuOTAzIDcuNzg5NjIgMTIuOTAzIDcuNTk0MzYgMTIuNzA3N0w0LjM3NjIyIDkuNDg5NTlMNS4wODMzMyA4Ljc4MjQ4TDcuOTQ3OTEgMTEuNjQ3MUwxMy4xNTYyIDYuNDM4NzNMMTMuODYzNCA3LjE0NTg0WiIgZmlsbD0iIzYxN0FEQSIvPgo8L3N2Zz4K";
