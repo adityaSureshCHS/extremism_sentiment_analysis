@@ -4,7 +4,7 @@ This module detects calls to action and action-oriented language in text.
 """
 
 import re
-from typing import Dict, List, Set, Tuple
+from typing import Dict, List, Set, Tuple, Union
 from collections import Counter
 import nltk
 from nltk.tokenize import word_tokenize, sent_tokenize
