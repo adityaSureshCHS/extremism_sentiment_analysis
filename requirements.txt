@@ -82,3 +82,4 @@ wheel==0.40.0
 wrapt==1.17.2
 xgboost==3.0.2
 ipywidgets==8.1.8
+shap==0.46.0
