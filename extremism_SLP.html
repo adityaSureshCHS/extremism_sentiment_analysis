@@ -9929,28 +9929,326 @@ In full feature_names (with VADER appended), "bitch" is at index: 818
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8f562732">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=30509f21">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="10.-Conclusion-and-Next-Steps">10. Conclusion and Next Steps<a class="anchor-link" href="#10.-Conclusion-and-Next-Steps">¶</a></h2><p>In this notebook, we:</p>
+<h2 id="10.-Interpretation-of-Model-Performance,-SHAP-Explanations,-and-Label-Quality-Check">10. Interpretation of Model Performance, SHAP Explanations, and Label-Quality Check<a class="anchor-link" href="#10.-Interpretation-of-Model-Performance,-SHAP-Explanations,-and-Label-Quality-Check">¶</a></h2><p>This section provides a detailed narrative of the model’s behaviour and what each metric and visualization in the notebook tells us about performance, calibration, interpretability, and dataset quality.</p>
+<hr/>
+<h3 id="10.1-Dataset-and-Label-Distribution">10.1 Dataset and Label Distribution<a class="anchor-link" href="#10.1-Dataset-and-Label-Distribution">¶</a></h3><ul>
+<li><p><strong>Class balance</strong><br/>
+The label distribution shows 548 <code>NON_EXTREMIST</code> and 531 <code>EXTREMIST</code> examples (roughly 51% vs 49%), so the dataset is nearly balanced. This is important because:</p>
 <ul>
-<li>Engineered TF–IDF + VADER features for social media messages</li>
-<li>Trained a single-layer neural network to detect extremist content</li>
-<li>Evaluated performance with accuracy, F1, ROC/PR curves, and calibration metrics</li>
-<li>Used SHAP to obtain both global and local explanations of model behavior</li>
-<li>Flagged high-confidence model–label disagreements for potential relabeling</li>
+<li>Accuracy is a meaningful metric (we are not dominated by a large majority class).</li>
+<li>Precision and recall for both classes can be compared directly, since neither class is rare.</li>
 </ul>
-<p><strong>Next steps could include:</strong></p>
+</li>
+<li><p><strong>Text length histogram – “Distribution of Text Lengths”</strong><br/>
+The histogram of <code>Original_Message</code> character counts shows how long the posts typically are. In your notebook:</p>
 <ul>
-<li>Trying alternative architectures (e.g., deeper MLP, logistic regression,
-transformer-based encoders)</li>
-<li>Experimenting with additional feature types (character n-grams, contextual embeddings)</li>
-<li>Calibrating predicted probabilities (e.g., Platt scaling, isotonic regression)</li>
-<li>Incorporating human feedback on flagged mislabels to iteratively improve the dataset</li>
+<li>Most messages cluster within a moderate length range, with relatively few extremely short or extremely long posts.</li>
+<li>This supports the use of an n-gram TF-IDF representation: there is enough text per message to capture meaningful patterns, but not so much that documents become extremely sparse or noisy.</li>
 </ul>
+</li>
+</ul>
+<p>Overall, the dataset is <em>well-behaved</em>: fairly balanced labels and reasonable text lengths, which makes the learning problem well-posed.</p>
+<hr/>
+<h3 id="10.2-Validation-Metrics-and-Confusion-Matrix">10.2 Validation Metrics and Confusion Matrix<a class="anchor-link" href="#10.2-Validation-Metrics-and-Confusion-Matrix">¶</a></h3><p>After training the single-layer perceptron and evaluating on the validation set, you report:</p>
+<ul>
+<li><p><strong>Overall metrics (validation set)</strong></p>
+<ul>
+<li><strong>Accuracy:</strong> 0.8219</li>
+<li><strong>F1 (macro):</strong> 0.8220</li>
+<li><strong>F1 (weighted):</strong> 0.8219</li>
+</ul>
+<p>Interpretation:</p>
+<ul>
+<li>Accuracy ≈ 82% means about 4 out of 5 validation posts are classified correctly.</li>
+<li>Macro F1 ≈ 0.82 shows balanced performance across both classes (it averages F1 for <code>EXTREMIST</code> and <code>NON_EXTREMIST</code>).</li>
+<li>Weighted F1 ≈ 0.82 is almost identical to macro F1 because the classes are nearly balanced.</li>
+</ul>
+</li>
+<li><p><strong>Per-class precision / recall / F1 (classification report)</strong></p>
+<ul>
+<li><code>NON_EXTREMIST</code><ul>
+<li>Precision: 0.83 (when the model predicts non-extremist, it’s correct 83% of the time).</li>
+<li>Recall: 0.82 (it correctly captures 82% of the true non-extremist posts).</li>
+<li>F1: 0.82 (harmonic mean of precision and recall).</li>
+</ul>
+</li>
+<li><code>EXTREMIST</code><ul>
+<li>Precision: 0.81 (when the model predicts extremist, it’s correct 81% of the time).</li>
+<li>Recall: 0.82 (it correctly detects 82% of the extremist posts).</li>
+<li>F1: 0.82.</li>
+</ul>
+</li>
+</ul>
+<p>This near-symmetry between classes means the model does <em>not</em> strongly favour one label over the other; it treats extremist and non-extremist content comparably well.</p>
+</li>
+<li><p><strong>Confusion matrix (table + heatmap)</strong></p>
+<ul>
+<li>True <code>NON_EXTREMIST</code> correctly predicted: 240</li>
+<li>True <code>NON_EXTREMIST</code> misclassified as <code>EXTREMIST</code>: 51</li>
+<li>True <code>EXTREMIST</code> correctly predicted: 217</li>
+<li>True <code>EXTREMIST</code> misclassified as <code>NON_EXTREMIST</code>: 48</li>
+</ul>
+<p>Interpretation:</p>
+<ul>
+<li>The number of false positives (51) and false negatives (48) is similar, again reflecting a balanced trade-off between the two error types.</li>
+<li>In practical terms:<ul>
+<li><strong>False positives</strong> (benign content flagged as extremist) represent moderation overhead and potential fairness/over-flagging concerns.</li>
+<li><strong>False negatives</strong> (extremist content not caught) represent missed detections, which matter for safety.</li>
+</ul>
+</li>
+<li>Because the counts are balanced, the current threshold (0.5) is a reasonable starting point; later, you can tune the threshold depending on whether you want to prioritize catching extremists (reduce false negatives) or avoiding false alarms (reduce false positives).</li>
+</ul>
+</li>
+</ul>
+<p>The <strong>detailed classification report table</strong> complements the confusion matrix by putting these numbers into normalized precision/recall/F1 form, making it easy to compare models or future experiments.</p>
+<hr/>
+<h3 id="10.3-Training-Dynamics:-Loss-and-Accuracy-Curves">10.3 Training Dynamics: Loss and Accuracy Curves<a class="anchor-link" href="#10.3-Training-Dynamics:-Loss-and-Accuracy-Curves">¶</a></h3><p>The training loop tracks:</p>
+<ul>
+<li><strong>Training loss per epoch</strong></li>
+<li><strong>Validation loss per epoch</strong></li>
+<li><strong>Validation accuracy per epoch</strong></li>
+</ul>
+<p>These are visualized in two line plots:</p>
+<ol>
+<li><p><strong>“Training and Validation Loss”</strong></p>
+<ul>
+<li>Training loss decreases steadily as epochs increase, indicating that the model is successfully fitting the training data.</li>
+<li>Validation loss falls at first, then flattens or shows small fluctuations.</li>
+<li>The epoch with the best validation accuracy is saved and restored as <code>best_state_dict</code>, helping you avoid overfitting by using the best-performing checkpoint rather than the final epoch.</li>
+</ul>
+</li>
+<li><p><strong>“Validation Accuracy over Epochs”</strong></p>
+<ul>
+<li>Validation accuracy starts lower and then climbs towards ~0.8+ as training progresses.</li>
+<li>The curve plateaus once the model has learned most of the patterns; small ups and downs indicate normal training noise rather than severe overfitting.</li>
+</ul>
+</li>
+</ol>
+<p>Together, these plots show that:</p>
+<ul>
+<li>The model learns meaningful structure from the data,</li>
+<li>The chosen training length (EPOCHS) is enough to reach stable performance,</li>
+<li>And early-stopping via <code>best_val_acc</code> is effectively used to select a good checkpoint.</li>
+</ul>
+<hr/>
+<h3 id="10.4-Threshold-Free-Metrics:-ROC-and-Precision%E2%80%93Recall-Curves">10.4 Threshold-Free Metrics: ROC and Precision–Recall Curves<a class="anchor-link" href="#10.4-Threshold-Free-Metrics:-ROC-and-Precision%E2%80%93Recall-Curves">¶</a></h3><p>To understand performance across <em>all</em> possible thresholds, the notebook includes:</p>
+<h4 id="9.4.1-ROC-Curve-and-ROC-AUC">9.4.1 ROC Curve and ROC AUC<a class="anchor-link" href="#9.4.1-ROC-Curve-and-ROC-AUC">¶</a></h4><ul>
+<li>The code prints:<br/>
+<code>ROC AUC: 0.9153</code></li>
+<li>The <strong>ROC curve</strong> plot compares:<ul>
+<li>The <strong>true positive rate (TPR)</strong> on the y-axis (fraction of extremists correctly detected)</li>
+<li>Against the <strong>false positive rate (FPR)</strong> on the x-axis (fraction of non-extremists incorrectly flagged)</li>
+<li>With a diagonal 45° line as a <strong>random baseline</strong>.</li>
+</ul>
+</li>
+</ul>
+<p>Interpretation:</p>
+<ul>
+<li>An ROC AUC of <strong>0.9153</strong> is very strong: the model can correctly rank random extremist vs non-extremist pairs about 91.5% of the time.</li>
+<li>The curve bowing well above the diagonal shows that, for many thresholds, you can get high TPR at reasonably low FPR.</li>
+<li>This means the model offers <strong>flexible operating points</strong>: if a downstream system wants to be more conservative or more aggressive, you can adjust the threshold with a predictable trade-off.</li>
+</ul>
+<h4 id="9.4.2-Precision%E2%80%93Recall-Curve-and-Average-Precision-(AP)">9.4.2 Precision–Recall Curve and Average Precision (AP)<a class="anchor-link" href="#9.4.2-Precision%E2%80%93Recall-Curve-and-Average-Precision-(AP)">¶</a></h4><ul>
+<li>The notebook reports:<br/>
+<code>Average Precision (AP): 0.9044</code></li>
+<li>The <strong>Precision–Recall (PR) curve</strong> plots precision vs recall as you sweep the threshold.</li>
+</ul>
+<p>Interpretation:</p>
+<ul>
+<li>An AP of <strong>0.9044</strong> is high, confirming that for a wide range of thresholds, you can achieve both high precision and high recall on the extremist class.</li>
+<li>Since your classes are fairly balanced, ROC AUC and AP tell a consistent story: the model is effective at ranking examples and distinguishing extremist vs non-extremist content.</li>
+</ul>
+<hr/>
+<h3 id="10.5-Calibration-Metrics-and-Probability-Histograms">10.5 Calibration Metrics and Probability Histograms<a class="anchor-link" href="#10.5-Calibration-Metrics-and-Probability-Histograms">¶</a></h3><p>To understand <em>how trustworthy</em> the predicted probabilities are, you compute:</p>
+<ul>
+<li><strong>Log loss:</strong> 0.3684</li>
+<li><strong>Brier score:</strong> 0.1168</li>
+</ul>
+<p>Interpretation:</p>
+<ul>
+<li><strong>Log loss</strong> penalizes overconfident wrong predictions heavily. A value around 0.37 is consistent with a reasonably well-calibrated, discriminative model for a binary problem.</li>
+<li><strong>Brier score</strong> is the mean squared error between predicted probabilities and the true 0/1 labels; 0.1168 is substantially lower than the 0.25 you’d get from a completely uninformative 50/50 predictor on a balanced dataset. This again indicates good calibration.</li>
+</ul>
+<p>The notebook then visualizes probability distributions:</p>
+<ol>
+<li><p><strong>“Distribution of Predicted Probabilities – Validation Set”</strong></p>
+<ul>
+<li>Shows the overall histogram of <code>P(EXTREMIST)</code> over the validation examples.</li>
+<li>Typically, you’ll see mass near 0 and 1 if the model is confident, and more central mass near 0.5 if the model is uncertain.</li>
+<li>A bimodal shape (peaks near 0 and 1) suggests confident predictions on many examples.</li>
+</ul>
+</li>
+<li><p><strong>“Predicted Probabilities by True Class – Validation Set”</strong></p>
+<ul>
+<li>Overlays two histograms:<ul>
+<li>One for true non-extremist posts,</li>
+<li>One for true extremist posts.</li>
+</ul>
+</li>
+<li>In a well-performing model:<ul>
+<li>The <strong>non-extremist</strong> histogram should concentrate near 0,</li>
+<li>The <strong>extremist</strong> histogram should concentrate near 1,</li>
+<li>With limited overlap between the two.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>These plots visually confirm the numeric metrics: the model is not only accurate, but also produces probabilities that meaningfully separate the two classes.</p>
+<hr/>
+<h3 id="10.6-SHAP-Global-Explanations-(Which-Features-Matter-Overall?)">10.6 SHAP Global Explanations (Which Features Matter Overall?)<a class="anchor-link" href="#10.6-SHAP-Global-Explanations-(Which-Features-Matter-Overall?)">¶</a></h3><p>You compute SHAP values using <code>KernelExplainer</code> over a subset of validation examples, then build a <code>shap.Explanation</code> object (<code>global_exp</code>) and visualize it with several plots.</p>
+<ol>
+<li><p><strong>Global SHAP bar plot (<code>shap.plots.bar(global_exp)</code>)</strong></p>
+<ul>
+<li>Shows the <strong>mean absolute SHAP value</strong> for the top features (words/phrases and VADER scores).</li>
+<li>Higher bars correspond to features that, on average, have a larger impact on pushing predictions towards extremist or non-extremist.</li>
+<li>Because your feature space is <code>[TF-IDF n-grams | VADER neg/neu/pos/compound]</code>, the plot tells you:<ul>
+<li>Which <strong>n-grams</strong> are most predictive of extremism vs non-extremism.</li>
+<li>How much sentiment signals (e.g., <code>vader_neg</code>, <code>vader_compound</code>) contribute relative to the text n-grams.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>SHAP heatmap (<code>shap.plots.heatmap(global_exp[top_idx])</code>)</strong></p>
+<ul>
+<li>Displays samples (rows) vs features (columns), with colour intensity representing SHAP values.</li>
+<li>You sort by <strong>predicted extremist probability</strong> and look at the top-N examples; this effectively shows:<ul>
+<li>Which features consistently drive the model towards an extremist prediction.</li>
+<li>Patterns such as “these phrases repeatedly push SHAP values in the positive direction for many high-probability extremist posts.”</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>SHAP scatter / dependence plot (<code>shap.plots.scatter(global_exp[:, feature_idx])</code>)</strong></p>
+<ul>
+<li>For a chosen feature, this plot shows:<ul>
+<li>The feature’s value (x-axis),</li>
+<li>The corresponding SHAP value (y-axis),</li>
+<li>Often coloured by the same or another feature.</li>
+</ul>
+</li>
+<li>Interpretation:<ul>
+<li>You see whether higher values of that feature (e.g., more frequent occurrence or higher TF-IDF weight) systematically increase or decrease the predicted probability of extremism.</li>
+<li>Monotonic trends suggest a clear directional effect; scattered points suggest more context-dependent contributions.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>SHAP summary bar plot (<code>shap.summary_plot(..., plot_type="bar")</code>)</strong></p>
+<ul>
+<li>This “classic” SHAP bar chart again highlights the top features by mean |SHAP|, as a more compact summary.</li>
+<li>It reinforces which n-grams and sentiment dimensions are globally most influential.</li>
+</ul>
+</li>
+</ol>
+<p>Overall, the global SHAP plots answer: <em>“What kinds of words, phrases, and sentiment patterns does the model rely on most when deciding whether a post is extremist?”</em></p>
+<hr/>
+<h3 id="10.7-SHAP-Local-Explanations-(Why-This-Specific-Prediction?)">10.7 SHAP Local Explanations (Why This Specific Prediction?)<a class="anchor-link" href="#10.7-SHAP-Local-Explanations-(Why-This-Specific-Prediction?)">¶</a></h3><p>Several plots zoom in on <strong>individual examples</strong> to explain <em>why</em> the model predicted extremist vs non-extremist for a particular message.</p>
+<ol>
+<li><p><strong>Waterfall plot (<code>shap.plots.waterfall(exp)</code>) with printed message</strong></p>
+<ul>
+<li>For a chosen index <code>i</code>, you:<ul>
+<li>Print the <strong>original validation message</strong> (<code>texts_val[i]</code>),</li>
+<li>Build a SHAP <code>Explanation</code> object for that row,</li>
+<li>Plot a waterfall that shows:<ul>
+<li>The <strong>baseline prediction</strong> (expected value over the background distribution),</li>
+<li>How each feature (starting from the most important) <strong>pushes the output up or down</strong>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Interpretation:<ul>
+<li>Red bars push the prediction towards extremist;</li>
+<li>Blue bars push it towards non-extremist;</li>
+<li>The final value at the bottom is the model’s predicted probability for this example.</li>
+</ul>
+</li>
+<li>This gives a human-readable narrative of <em>“These specific words and sentiment cues are why the model labelled this post as extremist / non-extremist.”</em></li>
+</ul>
+</li>
+<li><p><strong>Local SHAP bar plot (<code>shap.plots.bar(local_exp)</code>)</strong></p>
+<ul>
+<li>Shows the top contributing features for a single example as a bar chart.</li>
+<li>This is a simpler view than the waterfall, but conveys the same idea: which features are most responsible for the prediction, and in which direction they push.</li>
+</ul>
+</li>
+<li><p><strong>SHAP dependence plot (old API, <code>shap.dependence_plot(...)</code>)</strong></p>
+<ul>
+<li>Similar to the new scatter plot, but using the older interface.</li>
+<li>For a chosen feature index, you see how variation in that feature’s value across samples changes its SHAP contribution.</li>
+<li>This again provides insight into whether that feature steadily pushes predictions upward/downward or only matters in specific ranges or contexts.</li>
+</ul>
+</li>
+<li><p><strong>SHAP force plot (<code>shap.force_plot(...)</code>)</strong></p>
+<ul>
+<li>The interactive JS version (if supported) produces a horizontal “force” visualization where:<ul>
+<li>Features pushing towards extremist are shown in one colour,</li>
+<li>Features pushing towards non-extremist in another,</li>
+<li>The length of each bar corresponds to magnitude.</li>
+</ul>
+</li>
+<li>The static matplotlib version replicates this idea as an image.</li>
+<li>This is another intuitive way to show stakeholders <strong>how the model arrived at one specific probability</strong>.</li>
+</ul>
+</li>
+<li><p><strong>SHAP decision plot (<code>shap.decision_plot(...)</code>)</strong></p>
+<ul>
+<li>Visualizes how the prediction is constructed step-by-step:<ul>
+<li>Starting from the baseline expected value,</li>
+<li>Adding contributions of each feature in sequence.</li>
+</ul>
+</li>
+<li>For multiple samples, the decision plot shows many trajectories, helping you see whether different posts rely on similar or different combinations of features.</li>
+</ul>
+</li>
+</ol>
+<p>Collectively, these local SHAP plots are very useful for:</p>
+<ul>
+<li>Debugging individual predictions,</li>
+<li>Explaining decisions to non-technical stakeholders,</li>
+<li>And checking that the model is using <em>semantically reasonable</em> signals (and not just artefacts or spurious correlations).</li>
+</ul>
+<hr/>
+<h3 id="10.8-Model-Based-Label-Quality-Check">10.8 Model-Based Label Quality Check<a class="anchor-link" href="#10.8-Model-Based-Label-Quality-Check">¶</a></h3><p>Finally, you use the trained model to <strong>audit the labels</strong> by finding disagreements:</p>
+<ul>
+<li>For every row in the dataset, you compute the model’s probability <code>P(EXTREMIST)</code> and predicted label, then compare it to the ground-truth label.</li>
+<li>You report:<br/>
+<code>Number of disagreements between model and gold label: 227</code></li>
+</ul>
+<p>Interpretation:</p>
+<ul>
+<li>Out of all posts, 227 are places where the model’s prediction disagrees with the dataset label.</li>
+<li>You also compute a <strong>model confidence</strong> metric (<code>max(p, 1-p)</code>) and sort the disagreements by this confidence:<ul>
+<li>High-confidence disagreements are especially interesting:<ul>
+<li>If the model is usually accurate elsewhere, these may indicate <strong>potential mislabels</strong> in the dataset.</li>
+<li>Alternatively, they might highlight systematic <strong>biases or blind spots</strong> in the model (e.g., certain types of nuanced extremist content the model still misreads).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>The notebook then:</p>
+<ul>
+<li>Shows the top 20 disagreements in a table (with <code>row_id</code>, original text, true label, predicted label, probability, confidence), and</li>
+<li>Saves all disagreements to <code>potential_mislabels_by_model.csv</code> for manual review.</li>
+</ul>
+<p>This closes the loop from <em>pure performance evaluation</em> to <strong>data quality assurance</strong>, which is critical for sensitive tasks like extremism detection.</p>
+<hr/>
+<h3 id="10.9-High-Level-Takeaways">10.9 High-Level Takeaways<a class="anchor-link" href="#10.9-High-Level-Takeaways">¶</a></h3><p>Putting all metrics and plots together:</p>
+<ul>
+<li>The model achieves <strong>strong discriminative performance</strong> (Accuracy ≈ 0.82, ROC AUC ≈ 0.92, AP ≈ 0.90).</li>
+<li>Performance is <strong>balanced across classes</strong>: both extremist and non-extremist posts are handled with comparable precision and recall.</li>
+<li>Calibration metrics (log loss, Brier score, probability histograms) show that predicted probabilities are meaningfully informative, not random scores.</li>
+<li>SHAP global and local explanations confirm that the model’s decisions are driven by interpretable text features and sentiment signals, and provide a detailed story for both aggregate and individual behaviours.</li>
+<li>The disagreement analysis surfaces <strong>227 posts</strong> where the model and labels conflict, giving you a concrete shortlist for improving label quality or probing model weaknesses.</li>
+</ul>
+<p>Overall, the notebook provides a <strong>complete, professional evaluation</strong> of the extremism detection model: performance, calibration, interpretability, and dataset health are all addressed and connected to concrete visual evidence.</p>
 </div>
 </div>
 </div>
